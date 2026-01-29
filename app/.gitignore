@@ -1,0 +1,19 @@
+# ===== Android / Gradle =====
+.gradle/
+build/
+**/build/
+
+# ===== Local configuration =====
+local.properties
+
+# ===== IDE (Android Studio / IntelliJ) =====
+.idea/
+*.iml
+.idea_modules/
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
