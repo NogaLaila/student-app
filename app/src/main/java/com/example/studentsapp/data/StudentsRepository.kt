@@ -36,4 +36,15 @@ object StudentsRepository {
         val student = getById(id)
         student?.isChecked = !(student?.isChecked ?: false)
     }
+
+    fun addStudent(student: Student) {
+        students.add(student)
+    }
+
+    fun updateStudent(student: Student) {
+        val index = students.indexOfFirst { it.id == student.id }
+        if (index != -1) {
+            students[index] = student
+        }
+    }
 }

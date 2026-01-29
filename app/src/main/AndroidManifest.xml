@@ -12,6 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentsApp">
 
+        <!-- Edit student screen -->
+        <activity
+            android:name=".ui.EditStudentActivity"
+            android:exported="false" />
+
+        <!-- Add student screen -->
+        <activity
+            android:name=".ui.AddStudentActivity"
+            android:exported="false" />
+
         <!-- Details screen -->
         <activity
             android:name=".ui.StudentDetailsActivity"
