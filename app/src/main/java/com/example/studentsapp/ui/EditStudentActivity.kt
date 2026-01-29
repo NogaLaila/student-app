@@ -24,7 +24,6 @@ class EditStudentActivity : AppCompatActivity() {
         val btnSave = findViewById<Button>(R.id.btnSave)
         val btnCancel = findViewById<Button>(R.id.btnCancel)
 
-        // Pre-populate fields with existing student data
         etName.setText(student.name)
         etId.setText(student.id)
         etAddress.setText(student.address)
@@ -35,13 +34,11 @@ class EditStudentActivity : AppCompatActivity() {
             val address = etAddress.text.toString().trim()
             val phone = etPhone.text.toString().trim()
 
-            // Validate input
             if (name.isEmpty() || address.isEmpty() || phone.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Update student
             student.name = name
             student.address = address
             student.phone = phone

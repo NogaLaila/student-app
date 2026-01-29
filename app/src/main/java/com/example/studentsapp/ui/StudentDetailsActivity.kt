@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.studentsapp.R
 import com.example.studentsapp.data.StudentsRepository
-import com.squareup.picasso.Picasso
 
 class StudentDetailsActivity : AppCompatActivity() {
 
@@ -45,7 +44,6 @@ class StudentDetailsActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        // Refresh student details when returning from edit
         val studentId = intent.getStringExtra("STUDENT_ID") ?: return
         val student = StudentsRepository.getById(studentId) ?: return
 

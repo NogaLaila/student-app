@@ -28,19 +28,16 @@ class AddStudentActivity : AppCompatActivity() {
             val address = etAddress.text.toString().trim()
             val phone = etPhone.text.toString().trim()
 
-            // Validate input
             if (name.isEmpty() || id.isEmpty() || address.isEmpty() || phone.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Check if ID already exists
             if (StudentsRepository.getById(id) != null) {
                 Toast.makeText(this, "Student with this ID already exists", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Create and add new student
             val newStudent = Student(
                 id = id,
                 name = name,
